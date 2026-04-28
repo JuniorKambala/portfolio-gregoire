@@ -152,21 +152,58 @@ section p {
     }
 }
 
-/* ===== LIEN ACTIF NAVIGATION ===== */
+/* ===============================
+   NAVIGATION ACTIVE — CYBER VIVANTE
+   =============================== */
+
+/* Lien actif */
 nav a.active {
     color: #00f0ff;
-    text-shadow: 0 0 10px #00f0ff;
     position: relative;
+    padding: 8px 14px;
+    border-radius: 20px;
+    background: rgba(0, 240, 255, 0.08);
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.35);
+    text-shadow: 0 0 10px #00f0ff;
 }
 
-/* Ligne animée sous le lien actif */
-/*nav a.active::after {
+/* Ligne lumineuse animée */
+nav a.active::after {
     content: "";
     position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 100%;
+    left: 12px;
+    right: 12px;
+    bottom: 3px;
     height: 2px;
-    background: #00f0ff;
-    box-shadow: 0 0 8px #00f0ff;
-}*/
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #00f0ff,
+        transparent
+    );
+    animation: activeScan 1.6s infinite;
+}
+
+/* Animation de scan */
+@keyframes activeScan {
+    0% {
+        opacity: 0.2;
+        transform: translateX(-8px);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateX(8px);
+    }
+
+    100% {
+        opacity: 0.2;
+        transform: translateX(-8px);
+    }
+}
+
+/* Hover des liens */
+nav a:hover {
+    color: #00f0ff;
+    text-shadow: 0 0 12px #00f0ff;
+}
