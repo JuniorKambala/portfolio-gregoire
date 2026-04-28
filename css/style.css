@@ -207,3 +207,64 @@ nav a:hover {
     color: #00f0ff;
     text-shadow: 0 0 12px #00f0ff;
 }
+
+/* ===============================
+   FORMULAIRE DE CONTACT
+   =============================== */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    color: #00f0ff;
+}
+
+input,
+textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 240, 255, 0.3);
+    background: rgba(0, 0, 0, 0.6);
+    color: #e6f7ff;
+    outline: none;
+}
+
+/* Effet focus (quand on clique dedans) */
+input:focus,
+textarea:focus {
+    border-color: #00f0ff;
+    box-shadow: 0 0 10px #00f0ff;
+}
+
+/* Zone message */
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Bouton */
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 30px;
+    background: #00f0ff;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Hover bouton */
+button:hover {
+    box-shadow: 0 0 15px #00f0ff;
+    transform: scale(1.05);
+}
