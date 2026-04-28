@@ -151,3 +151,22 @@ section p {
         flex-direction: column;
     }
 }
+
+/* ===== LIEN ACTIF NAVIGATION ===== */
+nav a.active {
+    color: #00f0ff;
+    text-shadow: 0 0 10px #00f0ff;
+    position: relative;
+}
+
+/* Ligne animée sous le lien actif */
+/*nav a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background: #00f0ff;
+    box-shadow: 0 0 8px #00f0ff;
+}*/
