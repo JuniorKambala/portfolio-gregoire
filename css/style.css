@@ -268,3 +268,60 @@ button:hover {
     box-shadow: 0 0 15px #00f0ff;
     transform: scale(1.05);
 }
+
+
+/* ===============================
+   SECTION À PROPOS
+   =============================== */
+
+.about-section {
+    padding: 50px 8%;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 45px;
+    max-width: 1000px;
+    margin: 35px auto 0;
+}
+
+.about-image {
+    flex: 1;
+    max-width: 350px;
+}
+
+.about-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.about-content {
+    flex: 1.5;
+    line-height: 1.8;
+}
+
+/* Adaptation aux téléphones */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .about-image {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .about-image img {
+        height: 320px;
+    }
+
+    .about-content {
+        width: 100%;
+    }
+}
